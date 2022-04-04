@@ -14,5 +14,5 @@ mySequences
 myFirstAlignment <- msa(mySequences)
 print(myFirstAlignment, show="complete")
 
-msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none",showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
+msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
 
