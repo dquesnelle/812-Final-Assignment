@@ -11,7 +11,7 @@ BiocManager::install("msa")
 
 library(msa)
 
-system.file("tex", "texshade.sty", package="msa")
+# system.file("tex", "texshade.sty", package="msa")
 
 seqs <- readDNAStringSet("test_sequences.fasta")
 seqs
