@@ -13,14 +13,11 @@ library(msa)
 
 # system.file("tex", "texshade.sty", package="msa")
 
-seqs <- readDNAStringSet("test_sequences.fasta")
-seqs
-
-aligned <- msa(seqs)
-print(aligned, show = "complete")
+seqs <- readDNAStringSet("test_sequences.fasta"); seqs
+aligned <- msa(seqs); print(aligned, show = "complete")
 
 msaPrettyPrint(aligned, 
-               output = "pdf", 
+               output = "tex", 
                showNames = "none", 
                showLogo = "none", 
                showConsensus = "none", 
@@ -34,7 +31,7 @@ msaPrettyPrint(aligned,
 # download MiKTeX and TeXstudio (together as proTeXt https://ctan.org/pkg/protext)
 # open myFirstAlignment.tex in TeXstudio and press the button "Build & View" or hit F5
 # whatever files were involved in this process are in ./files right now
-# everything doesn't have to be in R: we can try tex to pdf in shell, calling MiKTeX to make it happen
+# everything doesn't have to be in R: we can try tex to pdf in shell, calling MiKTeX to make it happen!
 
 # trying again
 # needed to add following line in Sys.getenv("PATH") using Sys.setenv(PATH="...;...;...;___")
@@ -43,6 +40,8 @@ msaPrettyPrint(aligned,
 # oldPath <- Sys.getenv("PATH")
 # Sys.setenv(PATH = paste(oldPath, "C:\\Users\\aakan\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64", sep = ";")); Sys.getenv("PATH")
 # problem with pdflatex.exe
+
+# can always visualize on EMBL-EBI as well
 
 ### other stuff
 

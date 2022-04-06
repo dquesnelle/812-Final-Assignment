@@ -1,22 +1,24 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2022.4.5)  5 APR 2022 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  5 APR 2022 19:29
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **./myFirstAlignment.tex
 (myFirstAlignment.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> xparse <2020-03-03>
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -26,13 +28,13 @@ ty
 Package: texshade 2021/04/01 LaTeX TeXshade (v1.26)
  Package `texshade', Version 1.26 of 2021/04/01.
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty
-Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
 cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: dvips.def on input line 147.
+Package color Info: Driver file: dvips.def on input line 149.
 
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\dvips.
 def
@@ -44,16 +46,16 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
 ty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
 cs.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
 .def
@@ -73,7 +75,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
 ty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks15
+\@emptytoks=\toks16
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -81,23 +83,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 \symalphahelix=\mathgroup6
-\loopcount=\count187
-\innerloopcount=\count188
-\outerloopcount=\count189
-\seq@count=\count190
-\killseq@count=\count191
-\seq@percent=\count192
-\res@count=\count193
-\seq@pointer=\count194
-\pos@count=\count195
-\res@perline=\count196
-\end@count=\count197
-\cons@count=\count198
-\total@count=\count199
-\temp@count=\count266
-\triple@count=\count267
-\temp@@count=\count268
-\pos@sum=\count269
+\loopcount=\count193
+\innerloopcount=\count194
+\outerloopcount=\count195
+\seq@count=\count196
+\killseq@count=\count197
+\seq@percent=\count198
+\res@count=\count199
+\seq@pointer=\count266
+\pos@count=\count267
+\res@perline=\count268
+\end@count=\count269
+\cons@count=\count270
+\total@count=\count271
+\temp@count=\count272
+\triple@count=\count273
+\temp@@count=\count274
+\pos@sum=\count275
 \box@width=\skip49
 \name@width=\skip50
 \box@depth=\skip51
@@ -124,9 +126,9 @@ Package color Info: Redefining color LightLightLightGray on input line 1919.
 )
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdftex.def
-File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count270
-\l__pdf_internal_box=\box47
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box50
 ) (myFirstAlignment.aux)
 \openout1 = `myFirstAlignment.aux'.
 
@@ -148,44 +150,158 @@ LaTeX Font Info:    ... okay on input line 24.
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
+\scratchcounter=\count277
 \scratchdimen=\dimen139
-\scratchbox=\box48
-\nofMPsegments=\count272
-\nofMParguments=\count273
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count274
+\scratchbox=\box51
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count280
 \MPscratchDim=\dimen140
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
-\everyMPtoPDFconversion=\toks17
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks18
 )
 (C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
 df-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-)
-(C:/Users/aakan/AppData/Local/Temp/RtmpY9NLQR/seq40ac4185142a.fasta: . . . . .
-. . . ) [1
+
+(C:\Users\aakan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopdf-s
+ys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:/Users/aakan/AppData/Local/Temp/RtmpeIc8sn/seq29e883d2669.fasta:
+Runaway argument?
+! Paragraph ended before \inf@@get was complete.
+<to be read again> 
+                   \par 
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Misplaced alignment tab character &.
+\msfline ->\par &
+                  & & & @
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\msfline ->\par & &
+                    & & @
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\msfline ->\par & & &
+                      & @
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+\msfline ->\par & & & &
+                        @
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Runaway argument?
+! Paragraph ended before \check@letter was complete.
+<to be read again> 
+                   \par 
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+! Paragraph ended before \seq@get was complete.
+<to be read again> 
+                   \par 
+l.25 ...ocal/Temp/RtmpeIc8sn/seq29e883d2669.fasta}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+! Paragraph ended before \firstchar@get was complete.
+<to be read again> 
+                   \par 
+l.34 \end{texshade}
+                   
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+! Paragraph ended before \res@get was complete.
+<to be read again> 
+                   \par 
+l.34 \end{texshade}
+                   
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Misplaced alignment tab character &.
+\seq@line ->\par &
+                  @
+l.34 \end{texshade}
+                   
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+. . . . . . . . ) [1
 Non-PDF special ignored!
 <special> papersize=794.96999pt,614.295pt
 
-{C:/Users/aakan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/aakan/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}]
 (myFirstAlignment.aux) ) 
 Here is how much of TeX's memory you used:
- 6820 strings out of 479300
- 79633 string characters out of 2853553
- 832404 words of memory out of 3000000
- 24319 multiletter control sequences out of 15000+200000
- 404071 words of font info for 30 fonts, out of 3000000 for 9000
+ 6941 strings out of 478571
+ 83679 string characters out of 2841969
+ 944388 words of memory out of 3000000
+ 25158 multiletter control sequences out of 15000+600000
+ 469900 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 940i,5n,74p,214b,1539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 940i,5n,65p,212b,1554s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/aakan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on myFirstAlignment.pdf (1 page, 36975 bytes).
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aakan/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on myFirstAlignment.pdf (1 page, 46497 bytes).
 PDF statistics:
- 10 PDF objects out of 1000 (max. 8388607)
+ 16 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
