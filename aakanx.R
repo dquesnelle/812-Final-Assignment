@@ -41,7 +41,7 @@ msaPrettyPrint(aligned,
 # Sys.setenv(PATH = paste(oldPath, "C:\\Users\\aakan\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64", sep = ";")); Sys.getenv("PATH")
 # problem with pdflatex.exe
 
-# can always visualize on EMBL-EBI as well
+# can look into MView tool on EMBL-EBI as well, need to figure out how to download and use
 
 ### other stuff
 
