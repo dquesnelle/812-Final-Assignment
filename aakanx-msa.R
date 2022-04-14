@@ -24,6 +24,8 @@ msaPrettyPrint(aligned,
                showLegend = FALSE, 
                askForOverwrite = FALSE) # error, but .tex is usable
 
+# go to .tex file, go to .fasta file, copy to current directory, ALIGNMENT.FASTA
+
 ### pdf
 
 # after running the previous lines
@@ -41,7 +43,8 @@ msaPrettyPrint(aligned,
 # Sys.setenv(PATH = paste(oldPath, "C:\\Users\\aakan\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64", sep = ";")); Sys.getenv("PATH")
 # problem with pdflatex.exe
 
-# can look into MView tool on EMBL-EBI as well, need to figure out how to download and use
+# MView works well for visualization
+# download MView, should be able to visualize alignment using something like "perl MView ALIGNMENT.fasta"
 
 ### other stuff
 
