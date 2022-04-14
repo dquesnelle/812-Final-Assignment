@@ -17,7 +17,7 @@ seqs <- readDNAStringSet("test_sequences.fasta"); seqs
 aligned <- msa(seqs); print(aligned, show = "complete")
 
 msaPrettyPrint(aligned, 
-               output = "tex", 
+               output = "pdf", 
                showNames = "none", 
                showLogo = "none", 
                showConsensus = "none", 

@@ -1,0 +1,156 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.4)  14 APR 2022 12:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**aligned.tex
+(./aligned.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (c:/Users/Aakanx Panchal/Documents/R/win-library/4.1/msa/tex/texshade.sty
+Package: texshade 2021/04/01 LaTeX TeXshade (v1.26)
+ Package `texshade', Version 1.26 of 2021/04/01. (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 149.
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+) (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\structurefile=\read2
+\featurefile=\write3
+\alignfile=\read3
+\sublogofile=\read4
+\exp@rtfile=\write4
+\exp@rt@chimerafile=\write5
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+\symalphahelix=\mathgroup6
+\loopcount=\count193
+\innerloopcount=\count194
+\outerloopcount=\count195
+\seq@count=\count196
+\killseq@count=\count197
+\seq@percent=\count198
+\res@count=\count199
+\seq@pointer=\count266
+\pos@count=\count267
+\res@perline=\count268
+\end@count=\count269
+\cons@count=\count270
+\total@count=\count271
+\temp@count=\count272
+\triple@count=\count273
+\temp@@count=\count274
+\pos@sum=\count275
+\box@width=\skip49
+\name@width=\skip50
+\box@depth=\skip51
+\width@tmp=\skip52
+\box@height=\skip53
+\number@width=\skip54
+\line@stretch=\skip55
+\center@fill=\skip56
+\arrow@width=\skip57
+\arrow@height=\skip58
+\rule@thick=\skip59
+\arrow@thick=\skip60
+\logo@height=\skip61
+\equal@width=\skip62
+\equal@tmp=\skip63
+\equal@height=\skip64
+\temp@@length=\skip65
+\vspace@legend=\skip66
+\hspace@legend=\skip67
+\bar@length=\skip68
+Package color Info: Redefining color LightGray on input line 1716.
+Package color Info: Redefining color LightLightGray on input line 1817.
+Package color Info: Redefining color LightLightLightGray on input line 1919.
+) (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box50
+)
+No file aligned.aux.
+\openout1 = `aligned.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+(c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+
+! Package TeXshade Error: File `C:/Users/AAKANX\nobreakspace {}1/AppData/Local/Temp/RtmpysM2WH/seqe7c495d6b94.fasta' not found.
+
+See the TeXshade package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...ocal/Temp/RtmpysM2WH/seqe7c495d6b94.fasta}
+                                                  
+
+The alignment file you specified is missing or you have 
+misspelled it. 
+
+Stop here, otherwise you're likely getting in trouble. 
+Type X <return> to quit. 
+
+
+[1
+Non-PDF special ignored!
+<special> papersize=794.96999pt,614.295pt
+
+{c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+!pdfTeX error: pdflatex.exe (file c:/Users/Aakanx Panchal/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fflush() failed (Bad file descriptor)
+ ==> Fatal error occurred, no output PDF file produced!
