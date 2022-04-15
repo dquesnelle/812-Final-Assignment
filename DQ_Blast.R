@@ -1,11 +1,15 @@
 #!/usr/bin/env Rscript
 
-
+# This function will blast a sequence against the database and find similar sequences.
+# There are 3 parameters to this function:
+# 1. InputName: the name of the file containing the sequence to be blasted.
+# 2. E: the expect value of the blast search, meaning how similar you want your sequences. 10 is std, greater = less similar.
+# 3: OutputName: the name of the file the blast result will be output to.
 
 Seq_Blast = function(InputName, E, OutputName) {
 
   library(BiocManager)
-  #install("Biostrings")
+  #install("Biostrings") # these lines might mess with the command line
   #install("annotate")
   library(seqinr)
   library(littler)
