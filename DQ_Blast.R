@@ -6,7 +6,7 @@
 # 2. E: the expect value of the blast search, meaning how similar you want your sequences. 10 is std, greater = less similar.
 # 3: OutputName: the name of the file the blast result will be output to.
 
-Seq_Blast = function(InputName, E, OutputName) {
+Seq_Blast = function(InputName, E) {
 
   library(BiocManager)
   install("Biostrings") # these lines might mess with the command line
@@ -23,17 +23,24 @@ Seq_Blast = function(InputName, E, OutputName) {
                            timeout = 300, 
                            as = 'data.frame') # Blast sequence to find similar sequences
   
-  #print(AAblast)
-  
-  
- 
- write.fasta(sequences = AAblast, 
-              names = "sequences", 
-              file.out = OutputName) # Write the blast result to a new fasta file for use in the alignment
+  print(AAblast)
   
 }
 
-Seq_Blast("Mesorhizobium.fasta", 10, "blastseq.fasta") #Run the blast search
+  
+blast_output = function(OutputName) {
+  
+  write.csv(AAblast, file = OutputName)
+  
+  #write.fasta(sequences = AAblast, 
+              #names = "sequences", 
+              #file.out = OutputName) # Write the blast result to a new fasta file for use in the alignment
+}
+  
+  
+
+Seq_Blast("Mesorhizobium.fasta", 10) #Run the blast search
+blast_output("seqblast.csv")
 
 
 
