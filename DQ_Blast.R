@@ -9,8 +9,8 @@
 Seq_Blast = function(InputName, E, OutputName) {
 
   library(BiocManager)
-  #install("Biostrings") # these lines might mess with the command line
-  #install("annotate")
+  install("Biostrings") # these lines might mess with the command line
+  install("annotate")
   library(seqinr)
   library(littler)
   library(dplyr)
@@ -18,17 +18,26 @@ Seq_Blast = function(InputName, E, OutputName) {
   
   AA = readDNAStringSet(InputName) # Read test sequence
     
-  AAblast = blastSequences(paste(AA), 
-                           expect = E, 
+  AAblast = blastSequences(paste(AA),
+                           expect = E,
+                           timeout = 300, 
                            as = 'data.frame') # Blast sequence to find similar sequences
-
-  write.fasta(sequences = AAblast, 
+  
+  #print(AAblast)
+  
+  
+ 
+ write.fasta(sequences = AAblast, 
+              names = "sequences", 
               file.out = OutputName) # Write the blast result to a new fasta file for use in the alignment
   
 }
 
-#Seq_Blast("Mesorhizobium.fasta", 10, "testalign.fasta") # For testing purposes
+Seq_Blast("Mesorhizobium.fasta", 10, "blastseq.fasta") #Run the blast search
 
-args = commandArgs(trailingOnly = TRUE)
-Seq_Blast(args[c(1, 2, 3)]) # here we define our parameters for the command line
+
+
+
+#args = commandArgs(trailingOnly = TRUE)
+#Seq_Blast(args[c(1, 2, 3)]) # here we define our parameters for the command line
 
