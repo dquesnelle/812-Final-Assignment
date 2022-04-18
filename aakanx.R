@@ -10,7 +10,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("msa", force = TRUE)
 library(msa)
 
-seqs <- readDNAStringSet("test_sequences.fasta")
+seqs <- readDNAStringSet("nifh_sequences1.fasta")
 aligned <- msa(seqs)
 
 # alignment2fasta is adapted from https://stackoverflow.com/questions/48218332/how-to-output-results-of-msa-package-in-r-to-fasta
@@ -19,8 +19,7 @@ alignment2fasta <- function(alignment, filename) {
   for(i in 1:length(rownames(alignment))) {
     cat(paste0('>', rownames(alignment)[i])) # sep = "" in paste0() by default, whereas sep = " " in paste()
     cat('\n')
-    the.sequence <- toString(unmasked(alignment)[[i]])
-    cat(the.sequence)
+    cat(toString(unmasked(alignment)[[i]]))
     cat('\n')
   }
   sink(NULL)

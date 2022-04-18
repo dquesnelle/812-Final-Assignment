@@ -1,8 +1,10 @@
 # get Perl https://www.perl.org/get.html and make sure it is added to PATH
 # get MView https://desmid.github.io/mview/index.html#installation and make sure it is added to PATH
 # restart R for its PATH to be updated (or restart computer)
-mview.bat -in fasta -width 80 -html head -bold -css on -coloring identity -moltype dna ./out.fasta > figure.html; open figure.html
-mview.bat -in fasta -width 80 -html head -bold -css on -coloring mismatch -colormap red -ref 2 ./out.fasta > figure.html; open figure.html
+mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna ./out.fasta > figure1.html; open figure1.html
+mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colormap red -ref 32 -sort pid ./out.fasta > figure2.html; open figure2.html
+
+# can select "-ref 1" for reference sequence; 32 is S meliloti 2011
 
 
 
