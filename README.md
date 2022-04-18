@@ -10,5 +10,5 @@ For pipeline see: sequence_generator.sh
 
 ### Part 2: MSA 
 (done within msa.sh at the moment)
-1. msa.R took nifh_sequences1.fasta as input to produce alignment out.fasta
+1. msa.R took nifh_sequences1.fasta as input to produce the multiple sequence alignment out.fasta
 2. The MView program was used to produce visualizations in figure1.html and figure2.html
