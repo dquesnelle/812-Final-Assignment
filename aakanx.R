@@ -1,30 +1,21 @@
-# how to setup everything with GitHub:
-# clone GitHub repo from webpage, download GitHub Desktop
-# open in RStudio through GitHub Desktop
-# top right of RStudio, New Project, Existing Directory (everything you just cloned)
-
-print("test")
-
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("msa", force = TRUE)
 library(msa)
 
-seqs <- readDNAStringSet("nifh_sequences1.fasta")
-aligned <- msa(seqs)
+seqs <- readDNAStringSet("test_sequences.fasta")
+testaligned <- msa(seqs, method = "ClustalW")
 
-# alignment2fasta is adapted from https://stackoverflow.com/questions/48218332/how-to-output-results-of-msa-package-in-r-to-fasta
-alignment2fasta <- function(alignment, filename) {
-  sink(filename)
+# msa2fasta is adapted from https://stackoverflow.com/questions/48218332/how-to-output-results-of-msa-package-in-r-to-fasta
+msa2fasta <- function(alignment, filename) {
+  sink(filename) # divert output to filename
   for(i in 1:length(rownames(alignment))) {
-    cat(paste0('>', rownames(alignment)[i])) # sep = "" in paste0() by default, whereas sep = " " in paste()
-    cat('\n')
-    cat(toString(unmasked(alignment)[[i]]))
-    cat('\n')
+    cat(paste0('>', rownames(alignment)[i]), "\n", # write description line, sep = "" in paste0() by default and sep = " " in paste()
+        toString(unmasked(alignment)[[i]]), "\n") # convert sequence in alignment (DNAString object) to string
   }
-  sink(NULL)
+  sink(NULL) # end diversion to filename
 }
-alignment2fasta(aligned, 'out.fasta')
+msa2fasta(testaligned, 'testout.fasta')
 
 # use MView for visualization through .sh script
 
