@@ -8,14 +8,13 @@ library(gridExtra)
 library(reshape2)
 
 # Define path of alignment fasta
-path = "./ALIGNMENT.fasta"
+path = "./DMinput.fasta"
 
 # Create a DNAMultipleAlignment object
 DNAAlign <- readDNAMultipleAlignment(filepath = path,format = "fasta")
 
 # Trim the names of sequences and rename
 nameList <- DNAAlign@unmasked@ranges@NAMES
-gsub("(\\w{0,}\\.\\d)(.+)","\\1",test)
 for (i in 1:length(nameList)) {
   nameList[i] <- gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i])
 }
@@ -25,8 +24,8 @@ DNAAlign@unmasked@ranges@NAMES <- nameList
 DNAAlignBin <- as.DNAbin(DNAAlign)
 
 # Methods used and color scheme
-Method = c("TS","TV","JC69","TN93","GG95","BH87","indel")
-colorPalette = c("#fcfcfc","#c27ba0","#d9ead3","#ffc999","#d2b48c","#072e52")
+Method = c("TS","TV","JC69","K80","K81","TN93","indel")
+colorPalette = c("#fcfcfc","#c27ba0","#ffc999","#d2b48c","#4decec","#072e52")
 
 # Define function to calculate and plot distance matrix
 plotDM <- function(DNAbin,calMol,colorPal){
@@ -43,17 +42,17 @@ plotDM <- function(DNAbin,calMol,colorPal){
 }
 
 # New dir for plots
-dir.create("./DistMatPlot")
-setwd("./DistMatPlot")
+dir.create("./DistMatAndPhyloPlot")
+setwd("./DistMatAndPhyloPlot")
 
 # Plot DM based on different models for comparison
-pdf("DistMat(TS&TV).pdf", width = 9, height = 4)
+pdf("DistMat(TS&TV).pdf", width = 30, height = 12)
 DistMatTS <- plotDM(DNAAlignBin,Method[1],colorPalette)
 DistMatTV <- plotDM(DNAAlignBin,Method[2],colorPalette)
 grid.arrange(DistMatTS, DistMatTV, nrow = 1)
 while (!is.null(dev.list()))  dev.off()
 
-pdf("DistMat(JC69&TN93&GG95&BH87).pdf",width = 10,height = 9)
+pdf("DistMat(JC69&K80&K81&TN93).pdf",width = 30,height = 27)
 DistMatJC69 <- plotDM(DNAAlignBin,Method[3],colorPalette)
 DistMatTN93 <- plotDM(DNAAlignBin,Method[4],colorPalette)
 DistMatGG95 <- plotDM(DNAAlignBin,Method[5],colorPalette)
@@ -61,13 +60,10 @@ DistMatBH87 <- plotDM(DNAAlignBin,Method[6],colorPalette)
 grid.arrange(DistMatJC69, DistMatTN93, DistMatGG95, DistMatBH87, nrow = 2, ncol = 2)
 while (!is.null(dev.list()))  dev.off()
 
-pdf("DistMat(Indel).pdf", width = 5, height = 4)
+pdf("DistMat(Indel).pdf", width = 15, height = 12)
 DistMatIndel <- plotDM(DNAAlignBin,Method[7],colorPalette)
 DistMatIndel
 while (!is.null(dev.list()))  dev.off()
-
-# Return to previous dir
-setwd("../")
 
 ##using the distance matrix to contruct a phylogenetic tree 
 
@@ -77,26 +73,12 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 
 BiocManager::install("ggtree")
 
-# Define path of alignment fasta
-path = "/Users/isabellaasselstine/Desktop/ALIGNMENT.fasta"
-
-# Create a DNAMultipleAlignment object (from distance matrix code)
-DNAAlign <- readDNAMultipleAlignment(filepath = path,format = "fasta")
-
-#trim the gene names to make them more readable on the tree 
-nameList <- DNAAlign@unmasked@ranges@NAMES
-gsub("(\\w{0,}\\.\\d)(.+)","\\1")
-for (i in 1:length(nameList)) {
-  nameList[i] <- gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i])
-}
-DNAAlign@unmasked@ranges@NAMES <- nameList
-
 #defining the distance metrix object 
 DNAAlignBin <- as.DNAbin(DNAAlign)
-BbDM <- dist.dna(DNAAlignBin,model="K80") %>% as.matrix
+phylogeny <- dist.dna(DNAAlignBin,model="K80") %>% as.matrix
 
 #defining the tree and checking it looks good 
-Tree = nj(BbDM)
+Tree = nj(phylogeny)
 str(Tree)
 class(Tree)
 
@@ -105,6 +87,9 @@ library(ggtree)
 pdf(width=20,height=4)
 ggtree(Tree, branch.length=3, layout="rectangular")  + geom_tiplab()
 dev.off()
+
+# Return to previous dir
+setwd("../")
 
 
 
