@@ -12,3 +12,5 @@ For pipeline see: sequence_generator.sh
 (done within msa.sh at the moment... we could have an overall "script.sh" that itself calls each script in order from each part)
 1. msa.R produced a multiple sequence alignment out.fasta by taking nifh_sequences1.fasta as input
 2. The MView program was used to produce visualizations in [figure1.html](https://aakanx.github.io/temp/figure1.html) and [figure2.html](https://aakanx.github.io/temp/figure2.html)
+
+### Part 3: Calculating the distance matrix and contructing a phylogenetic tree
