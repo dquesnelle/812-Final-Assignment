@@ -1,4 +1,4 @@
-Rscript ./msa.R "test_sequences.fasta" "test1.fasta" # arguments are infile and outfile
+Rscript ./2-MSA/msa.R "test_sequences.fasta" "test1.fasta" # arguments are infile and outfile
 
 # get Perl https://www.perl.org/get.html and make sure it is added to PATH
 # get MView https://desmid.github.io/mview/index.html#installation and make sure it is added to PATH
