@@ -2,9 +2,9 @@ arguments <- commandArgs(trailingOnly = TRUE)
 sequences <- arguments[1]
 filename <- arguments[2]
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("msa", force = TRUE)
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# BiocManager::install("msa", force = TRUE)
 library(msa)
 
 alignment <- msa(readDNAStringSet(sequences), method = "ClustalW")
