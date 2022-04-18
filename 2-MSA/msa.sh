@@ -14,7 +14,7 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -molt
 # restart computer for PATH to be updated in R
 # check R PATH by writing in R console: Sys.getenv("PATH")
 # this part was done on Windows, which is why the batch file version of mview is used
-# mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna $outfile > ./2-MSA/figure1.html
+mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna $outfile > ./2-MSA/figure1.html
   # -in fasta: input format
   # -width 100: 100 bp per line shown
   # -html head: output to html file
@@ -23,7 +23,7 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -molt
   # -coloring identity: coloured with respect to identity/match with reference sequence
   # -moltype dna: colouring by pyrimidines, purines
   # first sequence in file is reference sequence by default
-# mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colormap red -ref 32 -sort pid $outfile > ./2-MSA/figure2.html
+mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colormap red -ref 32 -sort pid $outfile > ./2-MSA/figure2.html
   # -in fasta: input format
   # -width 100: 100 bp per line shown
   # -html head: output to html file
