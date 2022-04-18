@@ -1,21 +1,29 @@
+arguments <- commandArgs(trailingOnly = TRUE)
+sequences <- arguments[1]
+filename <- arguments[2]
+
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("msa", force = TRUE)
 library(msa)
 
-seqs <- readDNAStringSet("test_sequences.fasta")
-testaligned <- msa(seqs, method = "ClustalW")
+DSS_sequences <- readDNAStringSet(sequences)
+alignment <- msa(DSS_sequences, method = "ClustalW")
 
-# msa2fasta is adapted from https://stackoverflow.com/questions/48218332/how-to-output-results-of-msa-package-in-r-to-fasta
 msa2fasta <- function(alignment, filename) {
   sink(filename) # divert output to filename
   for(i in 1:length(rownames(alignment))) {
-    cat(paste0('>', rownames(alignment)[i]), "\n", # write description line, sep = "" in paste0() by default and sep = " " in paste()
-        toString(unmasked(alignment)[[i]]), "\n") # convert sequence in alignment (DNAString object) to string
+    cat(paste0('>', rownames(alignment)[i]), "\n",
+        toString(unmasked(alignment)[[i]]), "\n")
+        # write description line, sep = "" in paste0() by default and sep = " " in paste()
+        # convert sequence (DNAString object) in alignment to string object
   }
   sink(NULL) # end diversion to filename
 }
-msa2fasta(testaligned, 'testout.fasta')
+
+# msa2fasta(testaligned, 'testout.fasta')
+
+msa2fasta(alignment, filename)
 
 # use MView for visualization through .sh script
 
@@ -49,34 +57,30 @@ msa2fasta(testaligned, 'testout.fasta')
 
 ### examples in manual
 
-mySequenceFile <- system.file("examples", "exampleAA.fasta", package="msa")
-mySequences <- readAAStringSet(mySequenceFile)
-mySequences
-
-myFirstAlignment <- msa(mySequences)
-myFirstAlignment
-
-print(myFirstAlignment, show="complete")
-
-msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
-msaPrettyPrint(myFirstAlignment, y=c(164, 213), output="asis", showNames="none", showLogo="none", askForOverwrite=FALSE)
-
-install.packages("seqinr")
-
-hemoSeq <- readDNAStringSet("test_sequences.fasta")
-hemoAln <- msa(hemoSeq)
-
-hemoAln2 <- msaConvert(hemoAln, type = "seqinr::alignment")
-
-
-library(seqinr)
-d <- dist.alignment(hemoAln2, "identity")
-as.matrix(d)[1:3, "HBA1_Homo_sapiens", drop = FALSE]
-
-library(ape)
-hemoTree <- nj(d)
-plot(hemoTree, main = "Phylogenetic Tree of Hemoglobin Alpha Sequences")
-
-
-library(devtools)
-devtools::install_github("vragh/seqvisr", build_manual = TRUE, build_vignettes = TRUE)
+# mySequenceFile <- system.file("examples", "exampleAA.fasta", package="msa")
+# mySequences <- readAAStringSet(mySequenceFile)
+# mySequences
+# 
+# myFirstAlignment <- msa(mySequences)
+# myFirstAlignment
+# 
+# print(myFirstAlignment, show="complete")
+# 
+# msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
+# msaPrettyPrint(myFirstAlignment, y=c(164, 213), output="asis", showNames="none", showLogo="none", askForOverwrite=FALSE)
+# 
+# install.packages("seqinr")
+# 
+# hemoSeq <- readDNAStringSet("test_sequences.fasta")
+# hemoAln <- msa(hemoSeq)
+# 
+# hemoAln2 <- msaConvert(hemoAln, type = "seqinr::alignment")
+# 
+# 
+# library(seqinr)
+# d <- dist.alignment(hemoAln2, "identity")
+# as.matrix(d)[1:3, "HBA1_Homo_sapiens", drop = FALSE]
+# 
+# library(ape)
+# hemoTree <- nj(d)
+# plot(hemoTree, main = "Phylogenetic Tree of Hemoglobin Alpha Sequences")

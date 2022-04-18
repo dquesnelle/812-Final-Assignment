@@ -1,3 +1,5 @@
+Rscript ./aakanx.R "test_sequences.fasta" "test.fasta"
+
 # get Perl https://www.perl.org/get.html and make sure it is added to PATH
 # get MView https://desmid.github.io/mview/index.html#installation and make sure it is added to PATH
 # restart computer for PATH to be updated in R
@@ -5,8 +7,6 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -molt
 mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colormap red -ref 32 -sort pid ./out.fasta > figure2.html; open figure2.html
 
 # can select "-ref 1" for reference sequence; 32 is S meliloti 2011
-
-
 
 ### failed attempts
 
