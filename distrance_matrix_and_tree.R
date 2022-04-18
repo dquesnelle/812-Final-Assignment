@@ -68,3 +68,43 @@ while (!is.null(dev.list()))  dev.off()
 
 # Return to previous dir
 setwd("../")
+
+##using the distance matrix to contruct a phylogenetic tree 
+
+#installing ggtree
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("ggtree")
+
+# Define path of alignment fasta
+path = "/Users/isabellaasselstine/Desktop/ALIGNMENT.fasta"
+
+# Create a DNAMultipleAlignment object (from distance matrix code)
+DNAAlign <- readDNAMultipleAlignment(filepath = path,format = "fasta")
+
+#trim the gene names to make them more readable on the tree 
+nameList <- DNAAlign@unmasked@ranges@NAMES
+gsub("(\\w{0,}\\.\\d)(.+)","\\1")
+for (i in 1:length(nameList)) {
+  nameList[i] <- gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i])
+}
+DNAAlign@unmasked@ranges@NAMES <- nameList
+
+#defining the distance metrix object 
+DNAAlignBin <- as.DNAbin(DNAAlign)
+BbDM <- dist.dna(DNAAlignBin,model="K80") %>% as.matrix
+
+#defining the tree and checking it looks good 
+Tree = nj(BbDM)
+str(Tree)
+class(Tree)
+
+#making and saving the tree
+library(ggtree)
+pdf(width=20,height=4)
+ggtree(Tree, branch.length=3, layout="rectangular")  + geom_tiplab()
+dev.off()
+
+
+
