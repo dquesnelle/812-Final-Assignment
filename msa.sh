@@ -1,9 +1,10 @@
-Rscript ./aakanx.R "test_sequences.fasta" "test1.fasta" # arguments are infile and outfile
+Rscript ./msa.R "test_sequences.fasta" "test1.fasta" # arguments are infile and outfile
 
 # get Perl https://www.perl.org/get.html and make sure it is added to PATH
 # get MView https://desmid.github.io/mview/index.html#installation and make sure it is added to PATH
 # restart computer for PATH to be updated in R
 # check R PATH by writing in R console: Sys.getenv("PATH")
+# this part was done on Windows, which is why the batch file mview.bat is used
 mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna ./out.fasta > figure1.html; open figure1.html
   # -in fasta: input format
   # -width 100: 100 bp per line shown
