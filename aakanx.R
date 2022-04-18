@@ -2,13 +2,14 @@ arguments <- commandArgs(trailingOnly = TRUE)
 sequences <- arguments[1]
 filename <- arguments[2]
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("msa", force = TRUE)
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# BiocManager::install("msa", force = TRUE)
 library(msa)
 
-DSS_sequences <- readDNAStringSet(sequences)
-alignment <- msa(DSS_sequences, method = "ClustalW")
+alignment <- msa(readDNAStringSet(sequences), method = "ClustalW")
+# fasta to DNAStringSet for msa()
+# can also select ClustalOmega, Muscle as alignment tools
 
 msa2fasta <- function(alignment, filename) {
   sink(filename) # divert output to filename
@@ -20,8 +21,6 @@ msa2fasta <- function(alignment, filename) {
   }
   sink(NULL) # end diversion to filename
 }
-
-# msa2fasta(testaligned, 'testout.fasta')
 
 msa2fasta(alignment, filename)
 
