@@ -8,3 +8,4 @@ sh -c "$(curl -fsSL ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edire
 
 # Retrieve gene sequences using gene IDs
 bash gene_id_parser.sh
+
