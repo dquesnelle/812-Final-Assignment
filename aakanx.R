@@ -7,24 +7,42 @@ print("test")
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install("msa")
-
+BiocManager::install("msa", force = TRUE)
 library(msa)
 
-# system.file("tex", "texshade.sty", package="msa")
+seqs <- readDNAStringSet("test_sequences.fasta")
+aligned <- msa(seqs)
 
-seqs <- readDNAStringSet("test_sequences.fasta"); seqs
-aligned <- msa(seqs); print(aligned, show = "complete")
+# alignment2fasta is adapted from https://stackoverflow.com/questions/48218332/how-to-output-results-of-msa-package-in-r-to-fasta
+alignment2fasta <- function(alignment, filename) {
+  sink(filename)
+  for(i in 1:length(rownames(alignment))) {
+    cat(paste0('>', rownames(alignment)[i])) # sep = "" in paste0() by default, whereas sep = " " in paste()
+    cat('\n')
+    the.sequence <- toString(unmasked(alignment)[[i]])
+    cat(the.sequence)
+    cat('\n')
+  }
+  sink(NULL)
+}
+alignment2fasta(aligned, 'out.fasta')
 
-msaPrettyPrint(aligned, 
-               output = "tex", 
-               showNames = "none", 
-               showLogo = "none", 
-               showConsensus = "none", 
-               showLegend = FALSE, 
-               askForOverwrite = FALSE) # error, but .tex is usable
+# use MView for visualization through .sh script
 
-### pdf
+for (i in 1:3) {
+  print(i)
+}
+
+
+### failed visualizations
+
+# msaPrettyPrint(aligned, 
+#                output = "pdf", 
+#                showNames = "none", 
+#                showLogo = "none", 
+#                showConsensus = "none", 
+#                showLegend = FALSE, 
+#                askForOverwrite = FALSE) # error
 
 # after running the previous lines
 # this is what's working on Windows and makes a nicer .pdf
@@ -41,9 +59,20 @@ msaPrettyPrint(aligned,
 # Sys.setenv(PATH = paste(oldPath, "C:\\Users\\aakan\\AppData\\Local\\Programs\\MiKTeX 2.9\\miktex\\bin\\x64", sep = ";")); Sys.getenv("PATH")
 # problem with pdflatex.exe
 
-# can look into MView tool on EMBL-EBI as well, need to figure out how to download and use
 
-### other stuff
+### examples in manual
+
+mySequenceFile <- system.file("examples", "exampleAA.fasta", package="msa")
+mySequences <- readAAStringSet(mySequenceFile)
+mySequences
+
+myFirstAlignment <- msa(mySequences)
+myFirstAlignment
+
+print(myFirstAlignment, show="complete")
+
+msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
+msaPrettyPrint(myFirstAlignment, y=c(164, 213), output="asis", showNames="none", showLogo="none", askForOverwrite=FALSE)
 
 install.packages("seqinr")
 
@@ -62,3 +91,5 @@ hemoTree <- nj(d)
 plot(hemoTree, main = "Phylogenetic Tree of Hemoglobin Alpha Sequences")
 
 
+library(devtools)
+devtools::install_github("vragh/seqvisr", build_manual = TRUE, build_vignettes = TRUE)
