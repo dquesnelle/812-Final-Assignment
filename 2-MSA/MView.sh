@@ -22,17 +22,4 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colo
   # -css on: coloured letter backgrounds
   # -coloring mismatch: coloured with respect to mismatches from reference sequence
   # -ref 32: selecting 32 (S meliloti 2011) as reference sequence
-  # -sort pid: sorting by percent identity to reference 
-
-
-
-### failed attempts
-
-# cp aligned.tex "C:/Users/aakan/Desktop/tex/New folder/aligned.tex"
-# rm -r ./out
-# mkdir ./out
-# cp ./aligned.tex ./out/aligned.tex
-# cd ./out
-# pdflatex aligned.tex
-# keep pressing enter
-# cd ..
+  # -sort pid: sorting by percent identity to reference
