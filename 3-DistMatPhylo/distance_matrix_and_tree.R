@@ -19,9 +19,9 @@ library(reshape2)
 args <- commandArgs(trailingOnly = TRUE)
 
 # Create a DNAMultipleAlignment object
-DNAAlign <- readDNAMultipleAlignment(filepath = "/Users/isabellaasselstine/Desktop/DMinput.fasta",format = "fasta")
+DNAAlign <- readDNAMultipleAlignment(filepath = args[1],format = "fasta")
 
-g# Trim the names of sequences and rename
+# Trim the names of sequences and rename
 nameList <- DNAAlign@unmasked@ranges@NAMES
 for (i in 1:length(nameList)) {
   nameList[i] <- paste(i,gsub("(\\S*)(\\s)(\\w+)(\\s)(\\w+)(.*)","\\3\\4\\5",nameList[i]),collapse = " ")
@@ -80,7 +80,7 @@ while (!is.null(dev.list()))  dev.off()
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
-BiocManager::install("ggtree", force=TRUE)
+BiocManager::install("ggtree")
 
 # Defining the distance matrix object 
 
@@ -93,13 +93,8 @@ class(Tree)
 
 # Making and saving the tree
 library(ggtree)
-<<<<<<< HEAD:distance_matrix_and_tree.R
 pdf("Phylogeny.pdf",width=30,height=32)
-=======
-pdf("Phylogeny.pdf", width=30,height=32)
->>>>>>> 6d6b4212d26dbf462129e7cc5ed0c38d93274fd7:3-DistMatPhylo/distance_matrix_and_tree.R
 ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
 dev.off()
 
 # Return to previous dir
-setwd("../")
