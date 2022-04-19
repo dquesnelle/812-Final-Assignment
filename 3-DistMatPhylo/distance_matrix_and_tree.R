@@ -18,7 +18,7 @@ library(reshape2)
 # Define path of alignment fasta
 args <- commandArgs(trailingOnly = TRUE)
 
-# Create a DNAMultipleAlignment object
+# Take "DMinput.fasta" as input to create a DNAMultipleAlignment object
 DNAAlign <- readDNAMultipleAlignment(filepath = args[1],format = "fasta")
 
 # Trim the names of sequences and rename
@@ -98,3 +98,4 @@ ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
 dev.off()
 
 # Return to previous dir
+setwd("../")
