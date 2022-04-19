@@ -16,13 +16,15 @@ Group 1 - Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle
 
 \newpage
 
-## Background
+## Introduction
 
 Nitrogen fixation is the process in which atmospheric nitrogen is converted into ammonia or other nitrogenous compounds in order to increase its reactive potential. Without the ability to fix nitrogen, the biosynthesis of nitrogen-containing macromolecule building blocks such as amino acids and nucleic acids would not be possible. This is because nitrogen in its atmospheric form is extremely stable and thus is largely unable to react with other elements to form compounds. Given the importance of nitrogen-containing compounds in the biosynthesis of plants, animals, and other organisms, the process of nitrogen fixation is essential to life.
 
 Though nitrogen fixation can occur through inorganic means, the majority of nitrogen fixation is made possible by enzymes called nitrogenases. These enzymes are found in certain bacterial species and work by combining free nitrogen with other elements to form ammonia, nitrates, and nitrites, which may then be used in further reactions. Nitrogen-fixing bacteria often associate with plant roots where they are able to provide the plant with metabolically active nitrogen. These nitrogen fixing microorganisms play an important role in nitrogen cycling as they are responsible for over 90% of all nitrogen fixation on earth ("nitrogen fixation").
 
 Nitrogenases are encoded by a variety of nif genes. One such gene is nifH, which codes for one of the three nitrogenase subunits called dinitrogenase reductase. nifH is the choice genetic marker to search for when identifying nitrogen-fixing microorganisms. In our project, we will be looking at the alignment of nifH gene between a variety of bacterial species. Learning more about the conservation of nifH sequences is important when studying how nifH genes differ between bacterial species.
+
+In our project, we wanted to explore two questions. Firstly, What interesting insights can we glean from an alignment, distance matrix, and phylogeny of 100 nifH gene sequences? Secondly, are there non-rhizobium nifH sequences that are closer to the nifH sequence of the model rhizobium Sinorhizobium meliloti 2011 than the nifH sequences of other rhizobia? To address these questions, we will look at the nifH gene from 100 bacterial species and compare their relatedness via a multiple sequence alignment, distance matrix, and a phylogenetic tree. 
 
 ## Methods
 
