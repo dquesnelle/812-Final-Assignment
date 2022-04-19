@@ -52,6 +52,8 @@ Our alignment revealed some interesting results in terms of relatedness of bacte
 
 We also found that the nifH sequence of Vibrio natriegens, a gram-negative marine bacterium, shared a 62.7% identity with that of S. meliloti. There is already interest in replacing Escherichia coli strains, used widely for molecular cloning and synthetic biology applications, with V. natriegens, as it has a growth rate twice as fast as that of E. coli. In addition to its fast growth rate, as nitrogen fixation ability in V. natriegens has been observed [3], it would also be worth investigating whether V. natriegens could be engineered to produce ammonia at rates comparable to those of implementations of the Haber-Bosch process, a process that requires high fossil fuel inputs for sufficient production. V. natriegens could bring us a more sustainable alternative to ammonia production, helping fertilize soils and assure global food security. 
 
+\newpage
+
 ## References
 
 1.  Britannica, The Editors of Encyclopaedia. "nitrogen fixation". Encyclopedia Britannica, 9 Jul. 2021, <https://www.britannica.com/science/nitrogen-fixation>. Accessed 17 April 2022.
