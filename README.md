@@ -4,6 +4,7 @@
 
 #### To run entire script see pipeline.sh
 
+
 ### Part 1: Sequence Retrieval
 1. NCBI gene IDs for 100 *nifH* genes were gathered in nifh_accessions.csv
 2. gene_IDs.R isolated the gene IDs in integer form.
