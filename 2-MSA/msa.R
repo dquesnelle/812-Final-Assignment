@@ -5,6 +5,7 @@ filename <- arguments[2]
 # if (!requireNamespace("BiocManager", quietly = TRUE))
 #   install.packages("BiocManager")
 # BiocManager::install("msa", force = TRUE)
+
 library(msa)
 
 alignment <- msa(readDNAStringSet(sequences), method = "ClustalW")
@@ -25,8 +26,6 @@ msa2fasta <- function(alignment, filename) {
 msa2fasta(alignment, filename)
 
 # use MView for visualization through .sh script
-
-
 
 ### failed visualizations
 
