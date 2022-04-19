@@ -39,3 +39,15 @@ The preprocessed DMinput.fasta was then loaded as a DNAbin class through readDNA
 We then wanted to create a phylogenetic tree to show the relatedness of our chosen bacterial species based on their nifH genes. To do this we took the distance matrix K80 that was previously calculated to create the tree. We used the ggtree package and created a circular tree with the bacterial genus and species names as labels. This was saved as “Phylogeny.pdf”. 
 
 ## Results
+
+
+
+## References
+
+1. Britannica, The Editors of Encyclopaedia. "nitrogen fixation". Encyclopedia Britannica, 9 Jul. 2021, https://www.britannica.com/science/nitrogen-fixation. Accessed 17 April 2022.
+2. Jukes, T. H. and Cantor, C. R. (1969) Evolution of protein molecules. in Mammalian Protein Metabolism, ed. Munro, H. N., pp. 21--132, New York: Academic Press.
+3. Kans J. (2013) Entrez Direct: E-utilities on the Unix Command Line. In: Entrez Programming Utilities Help [Internet]. Bethesda (MD): National Center for Biotechnology Information (US); 2010-.
+4. Kimura, M. (1980) A simple method for estimating evolutionary rates of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution, 16, 111--120.
+5. Kimura, M. (1981) Estimation of evolutionary distances between homologous nucleotide sequences. Proceedings of the National Academy of Sciences USA, 78, 454--458.
+6. Tamura, K. and Nei, M. (1993) Estimation of the number of nucleotide substitutions in the control region of mitochondrial DNA in humans and chimpanzees. Molecular Biology and Evolution, 10, 512--526.
+
