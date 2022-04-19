@@ -93,7 +93,7 @@ class(Tree)
 
 # Making and saving the tree
 library(ggtree)
-pdf(width=30,height=32)
+pdf("Phylogeny.pdf", width=30,height=32)
 ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
 dev.off()
 
