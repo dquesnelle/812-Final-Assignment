@@ -1,6 +1,6 @@
 # 812-Final-Assignment
 
-####Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle
+#### Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle
 
 #### To run entire script see pipeline.sh
 
