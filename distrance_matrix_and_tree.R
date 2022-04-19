@@ -84,8 +84,8 @@ class(Tree)
 
 #making and saving the tree
 library(ggtree)
-pdf(width=20,height=4)
-ggtree(Tree, branch.length=3, layout="rectangular")  + geom_tiplab()
+pdf(width=30,height=32)
+ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
 dev.off()
 
 # Return to previous dir
