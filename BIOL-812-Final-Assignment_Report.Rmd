@@ -28,12 +28,7 @@ summary(cars)
 
 ## Methods
 
-You can also embed plots, for example:
+NifH gene sequences from 100 different species of bacteria and archaea were collected from the NCBI Gene database. The gene IDs of the 100 gene sequences were compiled into a table along with other identifiers like gene and species name. To isolate the gene IDs from the other components of the table, we ran the file through a script that returns only the gene IDs in numeric form. It’s in this form that we can use these gene IDs to retrieve the actual sequences. We took advantage of a command-line tool called Entrez Direct to retrieve our sequences. Entrez Direct is part of a larger tool called Entrez that is used for searching and fetching information from NCBI, and is one of the preferred methods for retrieval of genomic, coding and protein sequences (3). We ran the numeric array of gene IDs through an Entrez script that searched NCBI for each  gene sequence, converted them to FASTA format and then outputted them to a file that would end up containing all 100 sequences.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## Results
