@@ -93,7 +93,11 @@ class(Tree)
 
 # Making and saving the tree
 library(ggtree)
+<<<<<<< HEAD:distance_matrix_and_tree.R
+pdf("Phylogeny.pdf",width=30,height=32)
+=======
 pdf("Phylogeny.pdf", width=30,height=32)
+>>>>>>> 6d6b4212d26dbf462129e7cc5ed0c38d93274fd7:3-DistMatPhylo/distance_matrix_and_tree.R
 ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
 dev.off()
 
