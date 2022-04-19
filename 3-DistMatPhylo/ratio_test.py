@@ -14,5 +14,4 @@ def ratio_test(src, dist, ratio=0.6):
     with open(dist, "w", encoding="utf-8") as fasta:
         fasta.writelines(data)
 
-
 ratio_test(sys.argv[1], sys.argv[2])

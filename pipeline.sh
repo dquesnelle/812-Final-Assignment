@@ -1,7 +1,7 @@
 # Run this script to run the overall project
 nifh_fasta="./1-GetSeqs/nifh_sequences1.fasta"
-fasta_ori="./2-MSA/out.fasta" # naming alignment outfile here
-dm_path="./3-DistMatPhylo/DMinput.fasta"
+fasta_ori="./2-MSA/out.fasta" # naming alignment outfile
+dm_path="./3-DistMatPhylo/DMinput.fasta" # naming filtered alignment
 
 # Retrieve nifH gene sequences
 bash ./1-GetSeqs/sequence_generator.sh 

@@ -51,8 +51,8 @@ plotDM <- function(DNAbin,calMol,colorPal){
 }
 
 # New dir for plots
-dir.create("./DistMatAndPhyloPlot")
-setwd("./DistMatAndPhyloPlot")
+dir.create("./3-DistMatPhylo")
+setwd("./3-DistMatPhylo")
 
 # Plot DM based on different models for comparison
 pdf("DistMat(TS&TV).pdf", width = 30, height = 15)
@@ -82,7 +82,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 
 BiocManager::install("ggtree")
 
-# Defining the distance metrix object 
+# Defining the distance matrix object 
 
 phylogeny <- dist.dna(DNAAlignBin,model="K80") %>% as.matrix
 
