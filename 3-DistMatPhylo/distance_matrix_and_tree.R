@@ -19,12 +19,12 @@ library(reshape2)
 args <- commandArgs(trailingOnly = TRUE)
 
 # Create a DNAMultipleAlignment object
-DNAAlign <- readDNAMultipleAlignment(filepath = args[1],format = "fasta")
+DNAAlign <- readDNAMultipleAlignment(filepath = "/Users/isabellaasselstine/Desktop/DMinput.fasta",format = "fasta")
 
-# Trim the names of sequences and rename
+g# Trim the names of sequences and rename
 nameList <- DNAAlign@unmasked@ranges@NAMES
 for (i in 1:length(nameList)) {
-  nameList[i] <- paste(i,gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i]),collapse = " ")
+  nameList[i] <- paste(i,gsub("(\\S*)(\\s)(\\w+)(\\s)(\\w+)(.*)","\\3\\4\\5",nameList[i]),collapse = " ")
 }
 DNAAlign@unmasked@ranges@NAMES <- nameList
 
@@ -80,7 +80,7 @@ while (!is.null(dev.list()))  dev.off()
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
-BiocManager::install("ggtree")
+BiocManager::install("ggtree", force=TRUE)
 
 # Defining the distance matrix object 
 
