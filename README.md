@@ -19,3 +19,5 @@
 1. take the out.fasta file and filter out sequences with >60% identity to create DMinput.fasta 
 2. use DMinput.fasta to calculate the distance matrix and construct and phylogenetic tree using distance_matrix_and_tree.r
 3. output after running distance_matrix_and_tree.r will be a folder with four pdfs: DistMat(indel).pdf, DistMat(JC69&K80&K81&TN93).pdf, and DistMat(TS&TV).pdf to show the distance matrix and Rplots.pdf to show the phylogenetic tree 
+
+![Pipeline](pipeline.jpg)
