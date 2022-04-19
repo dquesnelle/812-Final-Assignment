@@ -1,3 +1,5 @@
+import sys
+
 def ratio_test(src, dist, ratio=0.6):
     data = []
     with open(src, "r", encoding="utf-8") as fasta:
@@ -13,4 +15,4 @@ def ratio_test(src, dist, ratio=0.6):
         fasta.writelines(data)
 
 
-ratio_test("D:/BIOL812/Assignment/GroupAssignment/812-Final-Assignment/out.fasta", "./DMinput.fasta")
+ratio_test(sys.argv[1], sys.argv[2])

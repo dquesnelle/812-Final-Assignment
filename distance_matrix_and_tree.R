@@ -1,4 +1,12 @@
 # Load packages
+if (!require("BiocManager", quietly = TRUE))
+  install.packages('BiocManager', repos='http://cran.us.r-project.org')
+if (!require("Biostrings", quietly = TRUE))
+  BiocManager::install("Biostrings")
+if (!require("gridExtra", quietly = TRUE))
+  install.packages('gridExtra', repos='http://cran.us.r-project.org')
+if (!require("reshape2", quietly = TRUE))
+  install.packages('reshape2', repos='http://cran.us.r-project.org')
 library(ape)
 library(Biostrings)
 library(dplyr)
@@ -8,17 +16,18 @@ library(gridExtra)
 library(reshape2)
 
 # Define path of alignment fasta
-path = "./DMinput.fasta"
+args <- commandArgs(trailingOnly = TRUE)
 
 # Create a DNAMultipleAlignment object
-DNAAlign <- readDNAMultipleAlignment(filepath = path,format = "fasta")
+DNAAlign <- readDNAMultipleAlignment(filepath = args[1],format = "fasta")
 
 # Trim the names of sequences and rename
 nameList <- DNAAlign@unmasked@ranges@NAMES
 for (i in 1:length(nameList)) {
-  nameList[i] <- gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i])
+  nameList[i] <- paste(i,gsub("(\\w{0,}\\.\\d)(.+)","\\1",nameList[i]),collapse = " ")
 }
 DNAAlign@unmasked@ranges@NAMES <- nameList
+
 
 # Convert to DNAMultipleAlignment a DNABin object
 DNAAlignBin <- as.DNAbin(DNAAlign)
@@ -46,7 +55,7 @@ dir.create("./DistMatAndPhyloPlot")
 setwd("./DistMatAndPhyloPlot")
 
 # Plot DM based on different models for comparison
-pdf("DistMat(TS&TV).pdf", width = 30, height = 12)
+pdf("DistMat(TS&TV).pdf", width = 30, height = 15)
 DistMatTS <- plotDM(DNAAlignBin,Method[1],colorPalette)
 DistMatTV <- plotDM(DNAAlignBin,Method[2],colorPalette)
 grid.arrange(DistMatTS, DistMatTV, nrow = 1)
@@ -60,29 +69,29 @@ DistMatBH87 <- plotDM(DNAAlignBin,Method[6],colorPalette)
 grid.arrange(DistMatJC69, DistMatTN93, DistMatGG95, DistMatBH87, nrow = 2, ncol = 2)
 while (!is.null(dev.list()))  dev.off()
 
-pdf("DistMat(Indel).pdf", width = 15, height = 12)
+pdf("DistMat(Indel).pdf", width = 15, height = 15)
 DistMatIndel <- plotDM(DNAAlignBin,Method[7],colorPalette)
 DistMatIndel
 while (!is.null(dev.list()))  dev.off()
 
-##using the distance matrix to contruct a phylogenetic tree 
+# Using the distance matrix to contruct a phylogenetic tree 
 
-#installing ggtree
+# Installing ggtree
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 BiocManager::install("ggtree")
 
-#defining the distance metrix object 
-DNAAlignBin <- as.DNAbin(DNAAlign)
+# Defining the distance metrix object 
+
 phylogeny <- dist.dna(DNAAlignBin,model="K80") %>% as.matrix
 
-#defining the tree and checking it looks good 
+# Defining the tree and checking it looks good 
 Tree = nj(phylogeny)
 str(Tree)
 class(Tree)
 
-#making and saving the tree
+# Making and saving the tree
 library(ggtree)
 pdf(width=30,height=32)
 ggtree(Tree, branch.length="none", layout="circular")  + geom_tiplab()
@@ -90,6 +99,3 @@ dev.off()
 
 # Return to previous dir
 setwd("../")
-
-
-
