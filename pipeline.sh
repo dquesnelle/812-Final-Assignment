@@ -8,7 +8,7 @@ bash ./1-GetSeqs/sequence_generator.sh
 
 # Prepare multiple sequence alignment, visualize using MView
 Rscript ./2-MSA/msa.R $nifh_fasta $fasta_ori
-MView.sh $fasta_ori
+bash MView.sh $fasta_ori
 
 # Filter out poorly aligned sequences
 Python ./3-DistMatPhylo/ratio_test.py $fasta_ori $dm_path
