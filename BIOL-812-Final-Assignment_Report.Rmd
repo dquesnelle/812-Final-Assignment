@@ -14,6 +14,8 @@ GitHub: <https://github.com/dquesnelle/812-Final-Assignment>
 
 Group 1 - Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle
 
+All authors contributed to conceptualization, methodology, analysis and writing of the final report. Dan Quesnelle was responsible for data curation, Aakanx Panchal was responsible for the multiple sequence alignment code and visualizations, Xinran Li was responsible for the distance matrix code and visualizations, and Isabella Asselstine was responsible for the phylogenetic tree code and visualization. 
+
 \newpage
 
 ## Introduction
