@@ -8,13 +8,17 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Data source: <https://www.ncbi.nlm.nih.gov/gene?term=nifH%5BGene%20Name%5D>
+![](images/Phylogeny-annotated-03.png){width="618"}
 
-GitHub: <https://github.com/dquesnelle/812-Final-Assignment>
+------------------------------------------------------------------------
 
-Group 1 - Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle
+**Data source:** <https://www.ncbi.nlm.nih.gov/gene?term=nifH%5BGene%20Name%5D>
 
-All authors contributed to conceptualization, methodology, analysis, and writing of the final report. Dan Quesnelle was responsible for data curation, Aakanx Panchal was responsible for the multiple sequence alignment code and visualizations, Xinran Li was responsible for the distance matrix code and visualizations, and Isabella Asselstine was responsible for the phylogenetic tree code and visualization.
+**GitHub:** <https://github.com/dquesnelle/812-Final-Assignment>
+
+*Group 1 - Isabella Asselstine, Xinran Li, Aakanx Panchal, Dan Quesnelle*
+
+*All authors contributed to conceptualization, methodology, analysis, and writing of the final report. Dan Quesnelle was responsible for data curation, Aakanx Panchal was responsible for the multiple sequence alignment code and visualizations, Xinran Li was responsible for the distance matrix code and visualizations, and Isabella Asselstine was responsible for the phylogenetic tree code and visualization.*
 
 \newpage
 
