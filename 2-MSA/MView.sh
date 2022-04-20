@@ -5,7 +5,7 @@ alignment_fasta=$1
 # restart computer for PATH to be updated in R
 # check R PATH by writing in R console: Sys.getenv("PATH")
 # this part was done on Windows, which is why the batch file version of mview is used
-mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna $alignment_fasta > ./2-MSA/figure1.html
+mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -moltype dna -ref 32 -sort pid $alignment_fasta > ./2-MSA/figure1.html
   # -in fasta: input format
   # -width 100: 100 bp per line shown
   # -html head: output to html file
