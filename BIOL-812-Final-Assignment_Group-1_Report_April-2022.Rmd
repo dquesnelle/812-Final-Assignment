@@ -8,7 +8,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-![](images/Phylogeny-annotated-03.png){width="618"}
+![](3-DistMatPhylo/Phylogeny-annotated-cropped.png){width="618"}
 
 ------------------------------------------------------------------------
 
