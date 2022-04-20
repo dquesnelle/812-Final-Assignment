@@ -13,7 +13,8 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring identity -molt
   # -css on: coloured letter backgrounds
   # -coloring identity: coloured with respect to identity/match with reference sequence
   # -moltype dna: colouring by pyrimidines, purines
-  # first sequence in file is reference sequence by default
+  # -ref 32: selecting 32 (S meliloti 2011) as reference sequence
+  # -sort pid: sorting by percent identity to reference
 mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colormap red -ref 32 -sort pid $alignment_fasta > ./2-MSA/figure2.html
   # -in fasta: input format
   # -width 100: 100 bp per line shown
@@ -21,5 +22,6 @@ mview.bat -in fasta -width 100 -html head -bold -css on -coloring mismatch -colo
   # -bold: bold letters
   # -css on: coloured letter backgrounds
   # -coloring mismatch: coloured with respect to mismatches from reference sequence
+  # -colormap red: colouring mismatches red
   # -ref 32: selecting 32 (S meliloti 2011) as reference sequence
   # -sort pid: sorting by percent identity to reference
